@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo Store - My Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-red-line"></div>
+    <header>
+        <div class="nav-top">
+            <div class="logo">
+                <span class="red-bg">N</span> STORE
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search games, hardware..." onkeyup="filterProducts()">
+            </div>
+
+            <div class="header-actions">
+                <div class="user-menu">
+                    <button class="icon-btn" onclick="toggleAuth()">👤 <span id="userLabel">Sign In</span></button>
+                    <div id="authDropdown" class="dropdown-content">
+                        <div id="loginForm">
+                            <input type="text" id="username" placeholder="Username">
+                            <input type="password" id="password" placeholder="Password">
+                            <button onclick="login()" class="n-btn-primary">Login</button>
+                            <button onclick="signup()" class="n-btn-secondary">Create Account</button>
+                        </div>
+                        <div id="userInfo" style="display: none;">
+                            <p>Hi, <strong id="displayUser"></strong>!</p>
+                            <button onclick="logout()" class="n-btn-secondary">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-btn" onclick="toggleCart()">
+                    🛒 <span id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="categories">
+            <button class="cat-btn active" onclick="renderStore('all')">
+                <span>🏠</span> All Products
+            </button>
+            <button class="cat-btn" onclick="renderStore('game')">
+                <span>🎮</span> Games
+            </button>
+            <button class="cat-btn" onclick="renderStore('hardware')">
+                <span>🕹️</span> Hardware
+            </button>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <div id="store" class="store-grid"></div>
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2 style="color: var(--n-red);">Your Shopping Bag</h2>
+            <hr>
+            <div id="cartItemsList"></div>
+            <div id="cartTotal" style="font-weight: 900; margin: 20px 0;"></div>
+            <button class="n-btn-primary" onclick="alert('Proceeding to Checkout!')">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
