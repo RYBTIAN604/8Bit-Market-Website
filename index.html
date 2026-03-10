@@ -11,14 +11,10 @@
     <div class="top-red-line"></div>
     <header>
         <div class="nav-top">
-            <div class="logo">
-                <span class="red-bg">N</span> STORE
-            </div>
-            
+            <div class="logo"><span class="red-bg">N</span> STORE</div>
             <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Search games, hardware..." onkeyup="filterProducts()">
+                <input type="text" id="searchBar" placeholder="Search games..." onkeyup="filterProducts()">
             </div>
-
             <div class="header-actions">
                 <div class="user-menu">
                     <button class="icon-btn" onclick="toggleAuth()">👤 <span id="userLabel">Sign In</span></button>
@@ -35,23 +31,13 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="cart-btn" onclick="toggleCart()">
-                    🛒 <span id="cartCount">0</span>
-                </div>
+                <div class="cart-btn" onclick="toggleCart()">🛒 <span id="cartCount">0</span></div>
             </div>
         </div>
-        
         <nav class="categories">
-            <button class="cat-btn active" onclick="renderStore('all')">
-                <span>🏠</span> All Products
-            </button>
-            <button class="cat-btn" onclick="renderStore('game')">
-                <span>🎮</span> Games
-            </button>
-            <button class="cat-btn" onclick="renderStore('hardware')">
-                <span>🕹️</span> Hardware
-            </button>
+            <button class="cat-btn active" onclick="renderStore('all')"><span>🏠</span> All Products</button>
+            <button class="cat-btn" onclick="renderStore('game')"><span>🎮</span> Games</button>
+            <button class="cat-btn" onclick="renderStore('hardware')"><span>🕹️</span> Hardware</button>
         </nav>
     </header>
 
@@ -66,10 +52,34 @@
             <hr>
             <div id="cartItemsList"></div>
             <div id="cartTotal" style="font-weight: 900; margin: 20px 0;"></div>
-            <button class="n-btn-primary" onclick="alert('Proceeding to Checkout!')">Proceed to Checkout</button>
+            <button class="n-btn-primary" onclick="alert('Checkout success!')">Proceed to Checkout</button>
         </div>
     </div>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="close-btn" onclick="toggleGame()">&times;</span>
+            <h2 style="color: var(--n-red);">N-Runner MiniGame</h2>
+            <div id="gameCanvasContainer">
+                <div id="player"></div>
+                <div id="obstacle"></div>
+            </div>
+            <div id="score">Score: 0</div>
+            <button class="n-btn-primary" onclick="startGame()" id="startBtn">Start Game</button>
+            <p style="font-size: 12px; margin-top: 10px;">Press <strong>Space</strong> or <strong>Tap</strong> to Jump!</p>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid #ddd; margin-top: 50px;">
+        <p>© 2026 Nintendo Store Demo</p>
+        <button onclick="toggleGame()" style="background:none; border:none; cursor:pointer; font-size: 24px; filter: grayscale(1);" title="Secret Game">❓</button>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
