@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8BIT Market</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top-red-line"></div>
     <header>
         <div class="nav-top">
-            <div class="logo">8BIT Market</div>
+            <div class="logo" onclick="location.href='index.html'">8BIT Market</div>
             <div class="search-container">
                 <input type="text" id="searchBar" placeholder="Search products..." onkeyup="filterProducts()">
             </div>
@@ -31,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cart-btn" onclick="location.href='cart.html'" style="cursor: pointer;">🛒 <span id="cartCount">0</span></div>
+                <div class="cart-btn" onclick="location.href='cart.html'">🛒 <span id="cartCount">0</span></div>
             </div>
         </div>
         <nav class="categories">
@@ -41,32 +40,8 @@
         </nav>
     </header>
 
-    <main id="mainContent">
-        <div id="store" class="store-grid"></div>
-    </main>
-
-    <div id="gameModal" class="modal">
-        <div class="modal-content" style="max-width: 500px;">
-            <span class="close-btn" onclick="toggleGame()">&times;</span>
-            <h2 style="color: var(--n-red);">8BIT Runner</h2>
-            <div id="gameCanvasContainer">
-                <div id="player"></div>
-                <div id="obstacle"></div>
-            </div>
-            <div id="score">Score: 0</div>
-            <button class="n-btn-primary" onclick="startGame()" id="startBtn">Start Game</button>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2026 8BIT Market Demo</p>
-        <button onclick="toggleGame()" class="secret-btn">❓</button>
-    </footer>
+    <main id="store" class="store-grid"></main>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
