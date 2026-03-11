@@ -4,55 +4,35 @@ body { background-color: var(--n-gray); color: var(--n-dark); font-family: 'Inte
 .top-red-line { height: 4px; background: var(--n-red); }
 header { background: var(--n-white); border-bottom: 1px solid var(--n-border); padding: 15px 5%; position: sticky; top: 0; z-index: 100; }
 .nav-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-
-.logo { font-weight: 700; font-size: 20px; color: #333; }
-
+.logo { font-weight: 700; font-size: 20px; }
 .header-actions { display: flex; align-items: center; gap: 15px; }
-.user-menu { position: relative; }
-.icon-btn { background: #f0f0f0; border: 1px solid #ccc; padding: 5px 12px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
 
-/* LOGIN FIX */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background: white;
-    width: 220px;
-    padding: 15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    z-index: 1000;
-    border: 1px solid #ddd;
-}
-.dropdown-content input {
-    width: 100%;
-    box-sizing: border-box; /* STOPS OVERFLOW */
-    margin-bottom: 8px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: block;
-}
+/* Fixed Dropdown */
+.dropdown-content { display: none; position: absolute; right: 0; top: 40px; background: white; width: 220px; padding: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-radius: 8px; z-index: 1000; border: 1px solid #ddd; }
+.dropdown-content input { width: 100%; box-sizing: border-box; margin-bottom: 8px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; display: block; }
 
-.categories { display: flex; gap: 20px; justify-content: center; padding: 10px; border-bottom: 1px solid #eee; }
-.cat-btn { background: none; border: none; font-weight: bold; cursor: pointer; padding: 5px; border-bottom: 3px solid transparent; }
-.cat-btn.active { color: var(--n-red); border-bottom-color: var(--n-red); }
-
-.store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px 5%; }
-.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: 0.3s; padding-bottom: 10px; }
+.store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px 5%; }
+.card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
-.card-info { padding: 15px; text-align: left; }
-.price-tag { font-weight: 900; color: var(--n-red); font-size: 1.3rem; margin: 5px 0; }
+.card-info { padding: 15px; }
+.price-tag { font-weight: 900; color: var(--n-red); font-size: 1.2rem; }
+
+/* NEW: Description Style */
+.product-desc { font-size: 0.8rem; color: #666; margin: 10px 0; line-height: 1.4; height: 2.8em; overflow: hidden; }
+
+/* NEW: Cart Page Styles */
+.cart-page-container { max-width: 700px; margin: 40px auto; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.cart-item-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee; }
+.cart-summary-box { margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px; text-align: right; }
+.back-link { text-decoration: none; color: #666; font-weight: bold; font-size: 0.9rem; }
 
 .n-btn-primary { background: var(--n-red); color: white; border: none; padding: 10px; border-radius: 20px; font-weight: bold; width: 100%; cursor: pointer; }
-.n-btn-secondary { background: #eee; border: none; padding: 8px; border-radius: 20px; width: 100%; margin-top: 5px; cursor: pointer; }
+.n-btn-secondary { background: #eee; border: none; padding: 10px; border-radius: 20px; width: 100%; cursor: pointer; margin-top: 5px; }
 
-/* MODAL & GAME */
+/* Mini-Game Modal Styles */
 .modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
 .modal-content { background: white; margin: 10% auto; padding: 20px; width: 80%; max-width: 400px; border-radius: 12px; position: relative; }
 .close-btn { position: absolute; right: 15px; top: 10px; font-size: 24px; cursor: pointer; }
-
 #gameCanvasContainer { width: 100%; height: 120px; border-bottom: 2px solid #333; position: relative; overflow: hidden; background: #eee; }
 #player { width: 30px; height: 30px; background: var(--n-red); position: absolute; bottom: 0; left: 40px; }
 #obstacle { width: 20px; height: 30px; background: #333; position: absolute; bottom: 0; right: -20px; }
@@ -60,6 +40,3 @@ header { background: var(--n-white); border-bottom: 1px solid var(--n-border); p
 @keyframes jump { 0%, 100% { bottom: 0; } 50% { bottom: 70px; } }
 .obstacle-move { animation: move 1.4s infinite linear; }
 @keyframes move { from { right: -20px; } to { right: 100%; } }
-
-footer { text-align: center; padding: 20px; opacity: 0.6; }
-.secret-btn { background: none; border: none; cursor: pointer; }
