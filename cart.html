@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8BIT Market - My Bag</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-red-line"></div>
+    <header>
+        <div class="nav-top">
+            <div class="logo">8BIT Market</div>
+            <a href="index.html" class="back-link">← Back to Shop</a>
+        </div>
+    </header>
+
+    <main class="cart-page-container">
+        <h2 style="color: var(--n-red); margin-bottom: 20px;">Your Shopping Bag</h2>
+        <div id="cartPageList">
+            </div>
+        <div class="cart-summary-box">
+            <h3 id="cartPageTotal">Total: ₱0</h3>
+            <button class="n-btn-primary" onclick="alert('Proceeding to Payment...')">Check Out</button>
+            <button class="n-btn-secondary" onclick="clearBag()">Empty Bag</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific trigger for this page
+        window.onload = () => {
+            renderCartPage();
+            checkAuth(); // Keep auth sync'd
+        };
+    </script>
+</body>
+</html>
