@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cart-btn" onclick="toggleCart()">🛒 <span id="cartCount">0</span></div>
+                <div class="cart-btn" onclick="location.href='cart.html'" style="cursor: pointer;">🛒 <span id="cartCount">0</span></div>
             </div>
         </div>
         <nav class="categories">
@@ -45,28 +45,16 @@
         <div id="store" class="store-grid"></div>
     </main>
 
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="toggleCart()">&times;</span>
-            <h2 style="color: var(--n-red);">Your Shopping Bag</h2>
-            <hr>
-            <div id="cartItemsList"></div>
-            <div id="cartTotal" style="font-weight: 900; margin: 20px 0; font-size: 1.2rem;"></div>
-            <button class="n-btn-primary" onclick="alert('Checkout success!')">Proceed to Checkout</button>
-        </div>
-    </div>
-
     <div id="gameModal" class="modal">
         <div class="modal-content" style="max-width: 500px;">
             <span class="close-btn" onclick="toggleGame()">&times;</span>
-            <h2 style="color: var(--n-red);">N-Runner</h2>
+            <h2 style="color: var(--n-red);">8BIT Runner</h2>
             <div id="gameCanvasContainer">
                 <div id="player"></div>
                 <div id="obstacle"></div>
             </div>
             <div id="score">Score: 0</div>
             <button class="n-btn-primary" onclick="startGame()" id="startBtn">Start Game</button>
-            <p style="font-size: 11px; margin-top: 10px;">SPACE to Jump</p>
         </div>
     </div>
 
