@@ -1,27 +1,27 @@
 const products = [
     // --- GAMES (10 Items) ---
-    { id: 1, name: "Zelda: Breath of the Wild", price: 3200, category: "game", img: "image/Zelda.png" },
-    { id: 2, name: "Minecraft", price: 1500, category: "game", img: "image/Minecraft.png" },
-    { id: 3, name: "Grand Theft Auto V", price: 1800, category: "game", img: "image/GTA V.png" },
-    { id: 4, name: "Cyberpunk 2077", price: 2200, category: "game", img: "image/CYBERPUNK.png" },
-    { id: 5, name: "Super Mario Odyssey", price: 2800, category: "game", img: "image/Zelda.png" },
-    { id: 6, name: "Elden Ring", price: 3000, category: "game", img: "image/ER.png" },
-    { id: 7, name: "Animal Crossing", price: 2600, category: "game", img: "image/animal.png" },
-    { id: 8, name: "Pokemon Scarlet", price: 2700, category: "game", img: "image/pokemon.png" },
-    { id: 9, name: "Stardew Valley", price: 800, category: "game", img: "image/stardew.png" },
-    { id: 10, name: "Mario Kart 8 Deluxe", price: 2800, category: "game", img: "image/mario cart.png" },
+    { id: 1, name: "Zelda: Breath of the Wild", price: 3200, category: "game", img: "images/Zelda.png" },
+    { id: 2, name: "Minecraft", price: 1500, category: "game", img: "images/Minecraft.png" },
+    { id: 3, name: "Grand Theft Auto V", price: 1800, category: "game", img: "images/GTA V.png" },
+    { id: 4, name: "Cyberpunk 2077", price: 2200, category: "game", img: "images/CYBERPUNK.png" },
+    { id: 5, name: "Super Mario Odyssey", price: 2800, category: "game", img: "images/Zelda.png" },
+    { id: 6, name: "Elden Ring", price: 3000, category: "game", img: "images/ER.png" },
+    { id: 7, name: "Animal Crossing", price: 2600, category: "game", img: "images/animal.png" },
+    { id: 8, name: "Pokemon Scarlet", price: 2700, category: "game", img: "images/pokemon.png" },
+    { id: 9, name: "Stardew Valley", price: 800, category: "game", img: "images/stardew.png" },
+    { id: 10, name: "Mario Kart 8 Deluxe", price: 2800, category: "game", img: "images/mario cart.png" },
 
     // --- HARDWARE (10 Items) ---
-    { id: 11, name: "Classic PSP (Refurbished)", price: 4500, category: "hardware", img: "image/PSP Classic.png" },
-    { id: 12, name: "GameBoy Advance", price: 3500, category: "hardware", img: "image/GBA.png" },
-    { id: 13, name: "Nintendo Switch OLED", price: 16500, category: "hardware", img: "image/switch.png" },
-    { id: 14, name: "PS5 Console", price: 30500, category: "hardware", img: "image/ps5.png" },
-    { id: 15, name: "Xbox Series X", price: 28000, category: "hardware", img: "image/xbox.png" },
-    { id: 16, name: "Pro Controller", price: 3800, category: "hardware", img: "image/controller.png" },
-    { id: 17, name: "Classic NES Mini", price: 5500, category: "hardware", img: "image/nes.png" },
-    { id: 18, name: "Gaming Headset", price: 2500, category: "hardware", img: "image/head.png" },
-    { id: 19, name: "Joy-Con Neon Pair", price: 4200, category: "hardware", img: "image/joy.png" },
-    { id: 20, name: "Steam Deck", price: 23000, category: "hardware", img: "image/deck.png" }
+    { id: 11, name: "Classic PSP (Refurbished)", price: 4500, category: "hardware", img: "images/PSP Classic.png" },
+    { id: 12, name: "GameBoy Advance", price: 3500, category: "hardware", img: "images/GBA.png" },
+    { id: 13, name: "Nintendo Switch OLED", price: 16500, category: "hardware", img: "images/switch.png" },
+    { id: 14, name: "PS5 Console", price: 30500, category: "hardware", img: "images/ps5.png" },
+    { id: 15, name: "Xbox Series X", price: 28000, category: "hardware", img: "images/xbox.png" },
+    { id: 16, name: "Pro Controller", price: 3800, category: "hardware", img: "images/controller.png" },
+    { id: 17, name: "Classic NES Mini", price: 5500, category: "hardware", img: "images/nes.png" },
+    { id: 18, name: "Gaming Headset", price: 2500, category: "hardware", img: "images/head.png" },
+    { id: 19, name: "Joy-Con Neon Pair", price: 4200, category: "hardware", img: "images/joy.png" },
+    { id: 20, name: "Steam Deck", price: 23000, category: "hardware", img: "images/deck.png" }
 ];
 
 // --- CORE STORE LOGIC ---
@@ -128,4 +128,5 @@ function checkAuth() {
 }
 
 renderStore(); updateCartUI(); checkAuth();
+
 
